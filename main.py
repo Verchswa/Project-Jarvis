@@ -38,27 +38,9 @@ def speak(text):
     pygame.mixer.music.unload()
     os.remove("temp.mp3") 
 
-
-
-
-
-
-
-
 def aiProcess(command):
-    client = OpenAI(api_key="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",)
-
-
-
-
-
-
-
-
-
-
-
-
+    client = OpenAI(api_key="<Your Key Here>",
+    )
 
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
@@ -132,5 +114,6 @@ if __name__ == "__main__":
 
         except Exception as e:
             print("Error; {0}".format(e))
+
 
 
